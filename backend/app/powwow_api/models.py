@@ -34,3 +34,30 @@ class CommunityMember(models.Model):
 
     class Meta:
         verbose_name_plural = "community_member"
+
+
+class Post(models.Model):
+    community_id = models.ForeignKey(Community, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    post_title = models.CharField(max_length=50)
+    post_description = models.CharField(max_length=150)
+    post_date = models.DateTimeField('post date')
+    
+    def __str__(self):
+        return f'{self.post_title}'
+
+    class Meta:
+        verbose_name_plural = "posts"
+
+
+class Comment(models.Model):
+    post_id = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    comment_content = models.CharField(max_length=150)
+    comment_date = models.DateTimeField('comment date')
+    
+    def __str__(self):
+        return f'{self.id}'
+
+    class Meta:
+        verbose_name_plural = "comments"
