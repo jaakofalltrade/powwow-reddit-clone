@@ -38,6 +38,11 @@ docker-compose run app "python manage.py migrate"
 
 ```
 
+If you want to access the Postgres database in the docker
+```bash
+postgres://postgres@localhost:5432/db
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
