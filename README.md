@@ -13,7 +13,7 @@ cd backend
 
 docker-compose build app
 
-docker run app "python manage.py migrate"
+docker run app sh -c "python manage.py migrate"
 
 # Frontend instructions will come soon WIP
 
@@ -27,14 +27,14 @@ To start the backend simply go the backend working directory if you are going to
 docker-compose up # Starts the Postgres database and the Django restframework.
 
 # If you want to do some django commands simply replace the [Insert Commands]
-docker-compose run app "[Insert Commands]" 
+docker-compose run app sh -c "[Insert Commands]" 
 
 # Examples
 # To create a new app
-docker-compose run app "python manage.py startapp newapps"
+docker-compose run app sh -c "python manage.py startapp newapps"
 # or Make some migrations
-docker-compose run app "python manage.py makemigrations"
-docker-compose run app "python manage.py migrate"
+docker-compose run app sh -c "python manage.py makemigrations"
+docker-compose run app sh -c "python manage.py migrate"
 
 ```
 
