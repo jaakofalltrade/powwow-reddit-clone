@@ -1,6 +1,6 @@
 FROM python:3.7
 
-MAINTAINER jaakofalltrade
+LABEL maintainer="jaakofalltrade"
 
 # Environment variables
 ENV PYTHONUNBUFFERED 1
