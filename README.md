@@ -37,6 +37,10 @@ docker-compose run app sh -c "python manage.py makemigrations"
 docker-compose run app sh -c "python manage.py migrate"
 
 ```
+If somehow you cannot edit the Django files apply this command on the folder.
+```bash
+sudo chown -R webdev:staff ./api
+```
 
 If you want to access the Postgres database in the docker
 ```bash
