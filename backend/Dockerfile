@@ -12,4 +12,4 @@ RUN pip install -r /requirements.txt
 # Copy project
 RUN mkdir /app
 WORKDIR /app
-COPY ./app /app
+COPY . /app
