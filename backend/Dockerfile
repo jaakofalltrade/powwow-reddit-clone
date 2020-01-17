@@ -1,6 +1,6 @@
 FROM python:3.7
 
-MAINTAINER jaakofalltrade
+LABEL maintainer="jaakofalltrade"
 
 # Environment variables
 ENV PYTHONUNBUFFERED 1
@@ -12,4 +12,4 @@ RUN pip install -r /requirements.txt
 # Copy project
 RUN mkdir /app
 WORKDIR /app
-COPY ./app /app
+COPY . /app
