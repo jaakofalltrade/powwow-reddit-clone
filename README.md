@@ -46,18 +46,24 @@ docker-compose run react sh -c "npm install"
 ```
 If somehow you cannot edit the Django files apply this command on the folder.
 ```bash
-sudo chown -R webdev:staff ./api
+sudo chown -R webdev:staff ./backend/api
 ```
 
+## How to access
 If you want to access the Postgres database.
 ```bash
 postgres://postgres@localhost:5432/db
 ```
 To access the applications:
-```bash
-http://127.0.0.1:8000/ # Django
-http://127.0.0.1:3000/ # React
-```
+> To access Django: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+>To access React: [http://127.0.0.1:3000/](http://127.0.0.1:3000/)
+
+## Questions and Answers
+Here are some questions that you might ask. Work in Progress
+> Q: Why are you executing command in docker-compose?
+
+> A: Because you don't need to install the requirements on your computer. Everything is inside the container. That is why we execute commands inside the container.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
