@@ -15,7 +15,7 @@ services:
             - db
     db:
         container_name:  backend_django_database
-        image: postgres:10.1-alpine
+        image: postgres:12.1-alpine
         ports:
             - "5432:5432"
         volumes:

@@ -43,10 +43,24 @@ docker-compose run app sh -c "python manage.py migrate"
 # It is also the same for React, simply replace 'app' with 'react'.
 docker-compose run react sh -c "npm install"
 
+# You can also run the bash using 'docker exec -it' from the container if you like, you can execute commands inside the container.
+
+# First, find the container name you want to run
+# For Docker the name should be 'powwow-reddit-clone_app'
+# For React the name should be 'powwow-reddit-clone_react'
+
+docker exec -it 'Type the container id here remove the apostrophe' bash
+
+# For example
+docker exec -it 685433910 bash
+
+# You can also type only the first 3 characters of the container id
+docker exec -it 685 bash
+
 ```
 If somehow you cannot edit the Django files apply this command on the folder.
 ```bash
-sudo chown -R webdev:staff ./backend/api
+sudo chown -R 'Your computer name goes here remove apostrophe':staff ./backend/api
 ```
 
 ## How to access
